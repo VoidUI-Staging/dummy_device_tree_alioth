@@ -77,6 +77,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
+    init.qti.display_boot.sh \
     init.qti.media.sh \
     init.qti.qcv.sh \
     ir_test.sh \
@@ -101,6 +102,7 @@ PRODUCT_PACKAGES += \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.qti.ufs.rc \
     init.target.rc \
     init.target.wigig.rc \
     init.recovery.hardware.rc \
