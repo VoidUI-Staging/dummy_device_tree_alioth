@@ -1,4 +1,4 @@
-# Unpinned blobs from alioth_global-user 12 RKQ1.211001.001 V13.0.4.0.SKHMIXM release-keys
+# Unpinned blobs from alioth_global-user 12 RKQ1.211001.001 V13.0.6.0.SKHMIXM release-keys
 
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
@@ -396,12 +396,16 @@ vendor/lib/com.qti.feature2.stub.so
 vendor/lib/com.qti.feature2.swmf.so
 vendor/lib/libOpenCL.so
 vendor/lib/libcamera_nn_stub.so
+vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcamxfacialfeatures.so
 vendor/lib/libcamxfdalgo.so
 vendor/lib/libcamxfdengine.so
+vendor/lib/libcamxifestriping.so
 vendor/lib/libcamximageformatutils.so
 vendor/lib/libcamxncs.so
 vendor/lib/libcamxstatscore.so
+vendor/lib/libcamxswprocessalgo.so
+vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libcvface_api.so
@@ -587,12 +591,16 @@ vendor/lib64/libarcsoft_superportrait.so
 vendor/lib64/libcamera_dirty.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
+vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfacialfeatures.so
 vendor/lib64/libcamxfdalgo.so
 vendor/lib64/libcamxfdengine.so
+vendor/lib64/libcamxifestriping.so
 vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxncs.so
 vendor/lib64/libcamxstatscore.so
+vendor/lib64/libcamxswprocessalgo.so
+vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcvface_api.so
@@ -802,6 +810,7 @@ system_ext/lib/com.quicinc.cne.api@1.1.so
 system_ext/lib/com.quicinc.cne.constants@1.0.so
 system_ext/lib/com.quicinc.cne.constants@2.0.so
 system_ext/lib/com.quicinc.cne.constants@2.1.so
+system_ext/lib/com.quicinc.cne.server@1.0.so
 system_ext/lib/com.quicinc.cne.server@2.0.so
 system_ext/lib/com.quicinc.cne.server@2.1.so
 system_ext/lib/com.quicinc.cne.server@2.2.so
@@ -834,6 +843,7 @@ system_ext/lib64/com.quicinc.cne.api@1.1.so
 system_ext/lib64/com.quicinc.cne.constants@1.0.so
 system_ext/lib64/com.quicinc.cne.constants@2.0.so
 system_ext/lib64/com.quicinc.cne.constants@2.1.so
+system_ext/lib64/com.quicinc.cne.server@1.0.so
 system_ext/lib64/com.quicinc.cne.server@2.0.so
 system_ext/lib64/com.quicinc.cne.server@2.1.so
 system_ext/lib64/com.quicinc.cne.server@2.2.so
@@ -961,14 +971,6 @@ vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
-
-# ConsumerIr
-vendor/bin/hw/android.hardware.ir@1.0-service
-vendor/etc/init/android.hardware.ir@1.0-service.rc
-vendor/lib/hw/android.hardware.ir@1.0-impl.so
-vendor/lib/hw/consumerir.default.so
-vendor/lib64/hw/android.hardware.ir@1.0-impl.so
-vendor/lib64/hw/consumerir.default.so
 
 # CVP
 system_ext/lib/vendor.qti.hardware.cvp@1.0-adapter-helper.so
@@ -1341,7 +1343,9 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc
 vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.xiaomi.xml
 
 # Fingerprint
+system_ext/lib/vendor.qti.hardware.fingerprint@1.0.so
 system_ext/lib/vendor.xiaomi.hardware.fingerprintextension@1.0.so
+system_ext/lib64/vendor.qti.hardware.fingerprint@1.0.so
 system_ext/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
@@ -1467,6 +1471,14 @@ vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
+
+# IR
+vendor/bin/hw/android.hardware.ir@1.0-service
+vendor/etc/init/android.hardware.ir@1.0-service.rc
+vendor/lib/hw/android.hardware.ir@1.0-impl.so
+vendor/lib/hw/consumerir.default.so
+vendor/lib64/hw/android.hardware.ir@1.0-impl.so
+vendor/lib64/hw/consumerir.default.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
@@ -3403,10 +3415,6 @@ vendor/lib/libc2d30_bltlib.so
 vendor/lib/libcacertclient.so
 vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcamerapostproc.so
-vendor/lib/libcamxexternalformatutils.so
-vendor/lib/libcamxifestriping.so
-vendor/lib/libcamxswprocessalgo.so
-vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
@@ -3610,10 +3618,6 @@ vendor/lib64/libcalculator.so
 vendor/lib64/libcalculator_domains.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamxexternalformatutils.so
-vendor/lib64/libcamxifestriping.so
-vendor/lib64/libcamxswprocessalgo.so
-vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so

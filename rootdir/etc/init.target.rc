@@ -333,16 +333,23 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-on property:vold.decrypt=trigger_restart_framework
-   start cnss_diag
+#on property:vold.decrypt=trigger_restart_framework
+#   start vendor.cnss_diag
 
-service cnss_diag /vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
+on property:persist.vendor.cnss_diag.enable=true
+    start vendor.cnss_diag
+
+on property:persist.vendor.cnss_diag.enable=false
+    stop vendor.cnss_diag
+
+service vendor.cnss_diag /vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
    class main
    user system
    group system wifi inet sdcard_rw media_rw diag
+   disabled
    oneshot
 
-service tcpdump /vendor/bin/tcpdump -i any -W 2 -C 2 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
+service vendor.tcpdump /vendor/bin/tcpdump -i any -W 2 -C 2 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
     class main
     user root
     group root wifi
@@ -356,14 +363,21 @@ service sniffer /vendor/bin/tcpdump -i wlan0 -w /data/vendor/wlan_logs/sniffer.p
     disabled
     oneshot
 
-on property:ro.miui.region=* && property:sys.user.0.ce_available=true
-    start tcpdump
+
+#on property:sys.user.0.ce_available=true
+#    start vendor.tcpdump
+
+on property:persist.vendor.tcpdump.enable=true
+    start vendor.tcpdump
+
+on property:persist.vendor.tcpdump.enable=false
+    stop vendor.tcpdump
 
 on property:vendor.hardware.wlan.runtcpdump=stop
-     stop tcpdump
+     stop vendor.tcpdump
 
  on property:vendor.hardware.wlan.runtcpdump=start
-     start tcpdump
+     start vendor.tcpdump
 
  on property:vendor.hardware.wlan.runsniffer=stop
      stop sniffer

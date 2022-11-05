@@ -61,53 +61,53 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    capture.sh \
+    init.qcom.efs.sync.sh \
+    teardown_loopback.sh \
     init.class_main.sh \
+    init.qti.display_boot.sh \
     init.crda.sh \
     init.mdm.sh \
-    init.mi.usb.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    init.qti.display_boot.sh \
-    init.qti.media.sh \
-    init.qti.qcv.sh \
-    ir_test.sh \
-    mishow.sh \
-    playback.sh \
-    qca6234-service.sh \
-    setup_backmic2headphone.sh \
-    setup_headsetmic2headphone.sh \
-    setup_mainmic2headphone.sh \
-    setup_rcv2mainmic.sh \
-    setup_rcv2topmic.sh \
-    setup_top-spk2backmic.sh \
     setup_top-spk2mainmic.sh \
     setup_top-spk2topmic.sh \
+    qca6234-service.sh \
+    init.qti.media.sh \
+    setup_mainmic2headphone.sh \
+    init.qcom.class_core.sh \
+    init.qcom.sh \
+    init.qcom.sdio.sh \
+    init.qcom.post_boot.sh \
     setup_topmic2headphone.sh \
-    teardown_loopback.sh \
-    us_cal.sh \
+    init.qti.qcv.sh \
+    init.qcom.sensors.sh \
+    setup_rcv2topmic.sh \
+    init.qcom.usb.sh \
     xmirtest.sh \
+    mishow.sh \
+    playback.sh \
+    capture.sh \
+    ir_test.sh \
+    init.mi.usb.sh \
+    init.qti.chg_policy.sh \
+    init.qti.dcvs.sh \
+    setup_headsetmic2headphone.sh \
+    setup_top-spk2backmic.sh \
+    us_cal.sh \
+    init.qcom.coex.sh \
+    setup_backmic2headphone.sh \
+    init.qcom.early_boot.sh \
+    setup_rcv2mainmic.sh \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.factory.rc \
-    init.qcom.rc \
+    init.target.rc \
     init.qcom.usb.rc \
     init.qti.ufs.rc \
-    init.target.rc \
     init.target.wigig.rc \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
     init.recovery.hardware.rc \
     miui.factoryreset.rc \
-    init.recovery.qcom.rc \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
