@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -57,56 +57,55 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Product characteristics
-PRODUCT_CHARACTERISTICS := nosdcard
+PRODUCT_CHARACTERISTICS := tablet
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    setup_mainmic2headphone.sh \
+    init.qti.media.sh \
+    init.qcom.post_boot.sh \
+    setup_rcv2mainmic.sh \
+    mishow.sh \
+    init.qti.display_boot.sh \
+    init.qcom.usb.sh \
+    init.qcom.coex.sh \
+    setup_top-spk2topmic.sh \
+    init.qcom.sdio.sh \
+    us_cal.sh \
+    init.crda.sh \
+    setup_rcv2topmic.sh \
+    init.qti.qcv.sh \
+    setup_top-spk2mainmic.sh \
     init.qcom.efs.sync.sh \
+    init.qcom.class_core.sh \
+    setup_topmic2headphone.sh \
+    qca6234-service.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.sh \
+    init.mi.usb.sh \
     teardown_loopback.sh \
     init.class_main.sh \
-    init.qti.display_boot.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    setup_top-spk2mainmic.sh \
-    setup_top-spk2topmic.sh \
-    qca6234-service.sh \
-    init.qti.media.sh \
-    setup_mainmic2headphone.sh \
-    init.qcom.class_core.sh \
-    init.qcom.sh \
-    init.qcom.sdio.sh \
-    init.qcom.post_boot.sh \
-    setup_topmic2headphone.sh \
-    init.qti.qcv.sh \
-    init.qcom.sensors.sh \
-    setup_rcv2topmic.sh \
-    init.qcom.usb.sh \
-    xmirtest.sh \
-    mishow.sh \
+    setup_backmic2headphone.sh \
+    init.mi.serial.sh \
     playback.sh \
-    capture.sh \
-    ir_test.sh \
-    init.mi.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
-    setup_headsetmic2headphone.sh \
     setup_top-spk2backmic.sh \
-    us_cal.sh \
-    init.qcom.coex.sh \
-    setup_backmic2headphone.sh \
-    init.qcom.early_boot.sh \
-    setup_rcv2mainmic.sh \
+    capture.sh \
+    init.qcom.sensors.sh \
+    init.mdm.sh \
+    setup_headsetmic2headphone.sh \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
-    init.qcom.usb.rc \
     init.qti.ufs.rc \
-    init.target.wigig.rc \
-    init.qcom.factory.rc \
     init.qcom.rc \
-    init.recovery.qcom.rc \
+    init.qcom.factory.rc \
+    init.target.wigig.rc \
+    init.qcom.usb.rc \
     init.recovery.hardware.rc \
+    init.recovery.qcom.rc \
     miui.factoryreset.rc \
 
 PRODUCT_COPY_FILES += \
@@ -120,4 +119,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
+$(call inherit-product, vendor/xiaomi/elish/elish-vendor.mk)

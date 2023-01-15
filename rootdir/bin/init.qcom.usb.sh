@@ -98,7 +98,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 					fi
 				fi
 			;;
-			"NABU" | "DAGU")
+			"NABU" | "DAGU" | "PIPA")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,adb
 				elif [ "$buildvariant" = "eng" ]; then
@@ -133,7 +133,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 			"Dragon" | "SBC")
 				setprop persist.vendor.usb.config diag,adb
 			;;
-			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU" | "ENUMA" | "NABU" | "PSYCHE"| "POUSSIN" | "MUNCH" | "DAGU")
+			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU" | "ENUMA" | "NABU" | "PSYCHE"| "POUSSIN" | "MUNCH" | "DAGU" | "PIPA")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
 				elif [ "$buildvariant" = "eng" ]; then

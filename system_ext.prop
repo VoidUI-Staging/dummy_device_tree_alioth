@@ -9,7 +9,6 @@ persist.sys.miui_scout_enable=true
 persist.sys.oom_crash_on_watchdog=true
 persist.sys.sysrqOnAnr_D_state=true
 persist.sys.timezone=Asia/Shanghai
-persist.sys.wifi_track=true
 persist.vendor.dpm.feature=11
 persist.wm.enable_remote_keyguard_animation=0
 ro.fota.oem=Xiaomi
