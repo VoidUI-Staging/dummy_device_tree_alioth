@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_qssi.mk
+    $(LOCAL_DIR)/lineage_alioth.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_qssi-user \
-    lineage_qssi-userdebug \
-    lineage_qssi-eng
+    lineage_alioth-user \
+    lineage_alioth-userdebug \
+    lineage_alioth-eng
