@@ -7,7 +7,7 @@ sleep 1
 echo "enabling top mic"
 audio-factory-test -f enable_top-mic
 # start recording
-tinycap /sdcard/rcv2top_mic.wav -r 48000 -b 16 -T 6 && echo "capture done" &
+tinycap /data/data/rcv2top_mic.wav -r 48000 -b 16 -T 6 && echo "capture done" &
 
 
 

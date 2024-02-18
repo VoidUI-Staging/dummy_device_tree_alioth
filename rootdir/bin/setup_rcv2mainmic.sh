@@ -8,7 +8,7 @@ echo "enabling main mic"
 audio-factory-test -f enable_main-mic
 
 # start recording
-tinycap /sdcard/rcv2main_mic.wav -r 48000 -b 16 -T 6 && echo "capture done" &
+tinycap /data/data/rcv2main_mic.wav -r 48000 -b 16 -T 6 && echo "capture done" &
 
 
 

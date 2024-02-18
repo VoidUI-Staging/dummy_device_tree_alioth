@@ -1,4 +1,4 @@
-# Android device tree for Redmi M2012K11AC (alioth)
+# Android device tree for qti missi system image for arm64 (missi)
 
 ```
 #

@@ -7,9 +7,6 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Include GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -39,6 +36,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# API levels
+BOARD_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -53,7 +54,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
-PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Product characteristics
@@ -89,11 +89,10 @@ PRODUCT_PACKAGES += \
     setup_mainmic2headphone.sh \
     setup_rcv2mainmic.sh \
     setup_rcv2topmic.sh \
-    setup_top-spk2backmic.sh \
-    setup_top-spk2mainmic.sh \
-    setup_top-spk2topmic.sh \
     setup_topmic2headphone.sh \
     teardown_loopback.sh \
+    typec_capture_headset.sh \
+    typec_play_headset.sh \
     us_cal.sh \
     xmirtest.sh \
 
@@ -112,12 +111,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
 
-# Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 30
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
+$(call inherit-product, vendor/qualcomm/missi/missi-vendor.mk)

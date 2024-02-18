@@ -174,24 +174,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "setup_top-spk2backmic.sh",
-    src: "bin/setup_top-spk2backmic.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "setup_top-spk2mainmic.sh",
-    src: "bin/setup_top-spk2mainmic.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "setup_top-spk2topmic.sh",
-    src: "bin/setup_top-spk2topmic.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "setup_topmic2headphone.sh",
     src: "bin/setup_topmic2headphone.sh",
     vendor: true,
@@ -200,6 +182,18 @@ sh_binary {
 sh_binary {
     name: "teardown_loopback.sh",
     src: "bin/teardown_loopback.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "typec_capture_headset.sh",
+    src: "bin/typec_capture_headset.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "typec_play_headset.sh",
+    src: "bin/typec_play_headset.sh",
     vendor: true,
 }
 
